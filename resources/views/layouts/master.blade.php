@@ -135,7 +135,7 @@
   <header class="blog-header py-3">
     <div class="row flex-nowrap justify-content-between align-items-center">
       <div class="col-4 pt-1">
-        <a class="text-muted" href="#">Panier <span class="badge badge-pill badge-dark">{{ Cart::count() }}</span></a>
+        <a class="text-muted" href="{{ route('cart.index')}}">Panier <span class="badge badge-pill badge-dark">{{ Cart::count() }}</span></a>
       </div>
       <div class="col-4 text-center">
         <a class="blog-header-logo text-dark" href="{{ route('products.index') }}">🛍️ E-Commerce</a>
