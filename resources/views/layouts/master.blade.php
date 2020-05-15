@@ -6,7 +6,11 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.6">
+    @yield('extra-meta')
     <title>Blog Template · Bootstrap</title>
+
+    @yield('extra-script')
+
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -135,7 +139,7 @@
   <header class="blog-header py-3">
     <div class="row flex-nowrap justify-content-between align-items-center">
       <div class="col-4 pt-1">
-        <a class="text-muted" href="{{ route('cart.index')}}">Panier <span class="badge badge-pill badge-dark">{{ Cart::count() }}</span></a>
+        <a class="text-muted" href="{{ route('cart.index') }}">Panier <span class="badge badge-pill badge-dark">{{ Cart::count() }}</span></a>
       </div>
       <div class="col-4 text-center">
         <a class="blog-header-logo text-dark" href="{{ route('products.index') }}">🛍️ E-Commerce</a>
@@ -289,5 +293,6 @@
     <a href="#">Revenir en haut</a>
   </p>
 </footer>
+@yield('extra-js')
 </body>
 </html>
